@@ -96,7 +96,7 @@ class HTTP {
       url: url,
       data: data,
       dataType: dataType,
-      success: csuccessCB,
+      success: successCB,
       error: errorCB,
       complete: completeCB
     });
@@ -107,11 +107,27 @@ class HTTP {
       type: 'GET',
       url: url,
       dataType: dataType,
-      success: csuccessCB,
+      success: successCB,
       error: errorCB,
       complete: completeCB
     });
   }
+}
+
+function formatDatas(obj){
+  var str = '';
+  for(var key in obj){
+    str += key + '=' + obj[key] + '&';
+  }
+  return str.replace(/&$/, '');
+}
+
+function randomNum(){
+  var num = '';
+  for(var i = 0; i < 20; i++){
+    num += Math.floor(Math.random() * 10);
+  }
+  return num;
 }
 
 export { HTTP };
