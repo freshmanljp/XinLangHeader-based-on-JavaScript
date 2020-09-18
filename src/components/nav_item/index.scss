@@ -54,7 +54,7 @@
       .img {
         // width: 33.3%;
         // flex实际上是有三个参数设置
-        flex: 1;
+        flex: 1 1 33.3%;
         margin-right: .5rem;
         background-color: #eee;
         // 清楚图片容器和图片的间距
