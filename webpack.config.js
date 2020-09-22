@@ -92,7 +92,8 @@ const config = {
       // 排除块文件
       excludeChunks: ['node-modules'],
       // 配置hash，防缓存用
-      hash: true
+      hash: true,
+      multihtmlCache:true// 解决多页打包的关键
     }),
     new htmlWebpackPlugin({
       // 压缩
@@ -111,7 +112,8 @@ const config = {
       // 排除块文件
       excludeChunks: ['node-modules'],
       // 配置hash，防缓存用
-      hash: true
+      hash: true,
+      multihtmlCache:true// 解决多页打包的关键
     }),
     new htmlWebpackPlugin({
       // 压缩
@@ -130,7 +132,8 @@ const config = {
       // 排除块文件
       excludeChunks: ['node-modules'],
       // 配置hash，防缓存用
-      hash: true
+      hash: true,
+      multihtmlCache:true// 解决多页打包的关键
     }),
 
     new miniCSSExtractPlugin({

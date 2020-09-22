@@ -24,6 +24,7 @@
     "ejs-loader": "^0.3.3",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
+    "html-webpack-plugin-for-multihtml": "^2.30.2",
     "image-webpack-loader": "^6.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "node-sass": "^4.13.1",

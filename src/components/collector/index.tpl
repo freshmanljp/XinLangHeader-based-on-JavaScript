@@ -1,0 +1,1 @@
+<div class="collector {{full_or_null}}" id="collector"></div>

@@ -11,7 +11,7 @@ export default () => {
     tpl (data, pageNum) {
       let list = ''
 
-      data.forEach(item => {
+      data.forEach((item, index) => {
         let template = null
         if (!item.thumbnail_pic_s) {
           template = tpl_0
@@ -24,10 +24,13 @@ export default () => {
         }
         list += template().replace(tplReplace(), (node, key) => {
           return {
-            // pageNum,
-            // index,
-            // uniqueKey: item.uniquekey,
-            // url: item.url,
+            // pageNum和index是方便在缓存池中找到对应的那条数据
+            pageNum,
+            index,
+            // 详情页取数据的时候需要使用，因为详情页无法取得缓存池的数据
+            uniqueKey: item.uniquekey,
+            // 文章详情的页面html的url
+            url: item.url,
             title: item.title,
             author: item.author_name,
             date: item.date,
